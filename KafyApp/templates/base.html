@@ -1,0 +1,42 @@
+{% load static %}
+
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/rastikerdar/vazir-font/v21.0.1/dist/font-face.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").addClass("uk-input");
+            $("button").addClass("uk-button uk-button-default");
+            $("a").addClass("uk-button uk-button-default");
+            $("input[name='username']").attr("uk-icon","icon:user");
+        });
+    </script>
+    <style>
+        @font-face {
+            font-family: Vazir;
+            src: url('Vazir.eot');
+            src: url('Vazir.eot?#iefix') format('embedded-opentype'),
+                url('Vazir.woff2') format('woff2'),
+                url('Vazir.woff') format('woff'),
+                url('Vazir.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        html{
+            font-family: Vazir;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+</head>
+<body>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+</html>

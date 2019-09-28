@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+  <div class="uk-container">
+    <div class="uk-card uk-card-default uk-width-2-3 uk-grid" style="margin: 90px auto !important; text-align: center !important; height:500px;">
+        {% block card_content %}
+        {% endblock %}
+    </div>
+  </div> 
+{% endblock %}
